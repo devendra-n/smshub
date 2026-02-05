@@ -9,7 +9,7 @@ const smsSchema=new mongoose.Schema({
   deviceId:String,
   deviceModel:String,
   alias:String,
-  sms:[{address:Number,data:[{id:Number,time:String,body:String}]} ]
+  data:[{address:String,sms:[{time:String,body:String}]} ]
 })
 
 const smsModel=mongoose.model("sms",smsSchema);
